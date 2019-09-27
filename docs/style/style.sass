@@ -1,0 +1,1143 @@
+$color_white: #fff
+$color_blue: #132335
+$color_blue_b: #0c1a2a
+$color_gray_w: #e5e5e5
+$color_gray: #f6f6f6
+$color_gray_b: #9a9a9a
+$color_brown: #b8a294
+$color_text: #747474
+$color_button: #dfc3ae
+$font_base_size: 10px
+$font-family-sans: 'Noto Sans TC'
+$font-family-serif: 'Noto Serif TC'
+$font-family-cormorant: 'Cormorant Infant'
+
+*
+  box-sizing: border-box
+  // border: 1px solid #fff !important
+
+@mixin size($w,$h)
+  width: $w
+  height: $h
+
+html,body
+  font-family: $font-family-sans
+  overflow-x: hidden
+
+h1 
+  font-family: $font-family-serif
+  font-size: $font_base_size*6
+  font-weight: 700
+  color: $color-blue
+  line-height: 85px
+
+h2 
+  font-family: $font-family-serif
+  font-size: $font_base_size*4.5
+  font-weight: 500
+  color: $color-blue
+
+h3 
+  margin: 25px 0 35px 0
+  font-family: $font-family-serif
+  font-size: $font_base_size*2.5
+  font-weight: 700
+  line-height: 30px
+  color: $color-blue
+
+h4 
+  font-family: $font-family-serif
+  font-size: $font_base_size*1.8
+  font-weight: 700
+  line-height: 30px
+  color: $color-blue
+
+h5 
+  display: inline-block
+  font-family: $font-family-cormorant
+  font-size: $font_base_size*2
+  font-weight: 500
+  font-style: italic
+  color: $color-brown
+  span 
+    font-size: $font_base_size*4.5
+    font-weight: 500
+
+h6 
+  font-family: $font-family-sans
+  font-size: $font-base-size*1.5
+  font-weight: 300
+  line-height: 25px
+  color: $color-white
+
+
+p 
+  font-family: $font-family-sans
+  font-size: $font-base-size*1.5
+  font-weight: 100
+  line-height: 25px
+  color: $color-text
+
+
+a 
+  text-decoration: none
+  color: $color_blue
+
+button
+  padding: 20px 50px
+  height: 64px
+  border: 0
+  background-color: none
+  font-family: $font-family-serif
+  font-size: $font_base_size*1.6
+  font-weight: 700
+  background: $color-blue
+  outline: none
+  a 
+    color: $color-button
+  &:hover
+    background: $color-brown
+    a 
+      color: $color_white
+
+.arrow
+    transform: translateY(50px)
+    opacity: 0.5
+    img 
+      height: 46px
+    &:hover 
+      opacity: 1
+  
+.button
+  color: $color-white
+  background: $color-brown
+  img
+    height: 20px
+    top: 4px
+    right: -15px
+  &:hover
+    background: $color-blue_b
+    color: $color_brown
+    img 
+      color: $color_brown
+
+
+.title
+    text-align: center
+    margin-bottom: 65px
+    img 
+      margin: 20px
+      height: 46px
+
+
+
+  
+// 畫面區塊
+
+header
+  z-index: 999
+  font-family: $font-family-serif
+  font-size: $font_base_size*1.5
+  width: 35%
+  display: inline-block
+  .header
+    width: 100%
+    padding-left: 27%
+    .logo
+      width: 21%
+    &__nav
+      display: inline-block
+      font-size: 15px
+    &__form
+      position: fixed
+      padding: 25px
+      font-weight: 700
+      background: $color_blue
+      color: $color_white
+      right: 0
+      top: 0
+      z-index: 2
+      &:hover 
+        background: $color_brown
+    nav
+      display: inline-block
+      list-style: none  
+      ul 
+        padding-top: 30px 
+      li
+        float: left
+      a 
+        padding: 0 30px 0 0
+        &:hover 
+          color: $color_brown
+
+  .burger
+    position: relative
+    z-index: 2
+    &__origin
+      position: fixed
+      margin-right: 2%
+      width: 30px
+      height: 1px
+      right: 4% 
+      top: 30px
+      background-color: $color_white
+      box-shadow: 0 0 3px 0 rgba(1,0,0,.6)
+      &:before, &:after
+        position: absolute
+        display: inline-block
+        content: ''
+        width: 30px
+        height: 1px
+        background-color: $color_white
+        box-shadow: 0 0 3px 0 rgba(1,0,0,.6)
+      &:before 
+
+        top: -8px
+      &:after 
+        top: 8px
+
+  // .burger__bar
+  //   position: fixed
+  //   border: 1px solid $color_white
+  //   width: 30px
+  //   margin-top: -160px
+  //   right: 6%
+  //   margin-right: 10px
+  //   box-shadow: 0 0 3px 0 rgba(1,0,0,.6)
+  //   &__top
+  //     transform: translateY(-6px)
+  //   &__bottom
+  //     transform: translateY(6px)
+   
+  #nav__burger
+    display: none
+  
+  .burger__menu
+    position: fixed
+    float: right
+    clear: both
+    top: 0
+    bottom: 0
+    padding: 30px
+
+.contaliner 
+  
+  display: inline-block   
+  width: 100%
+  margin-top: -10%
+  .content
+    display: inline-block
+    width: 100%
+  .banner
+    display: inline-block
+    position: relative
+    width: 100%
+    box-sizing: border-box
+    z-index: 1
+  
+    &__content
+      position: relative
+      display: inline-block
+      width: 40%
+      padding-left: 10%
+      padding-top: 20%
+      padding-bottom: 5%
+      h1 
+        padding-bottom: 4%
+      button
+        position: absolute
+        bottom: -4.5%
+    &__wrapper
+      display: inline-block
+      position: absolute  
+      width: 60%
+      top: 0
+      right: 0
+  
+      img
+        width: 100%
+        
+
+  .choice
+    position: relative
+    background: $color_gray
+    margin-right: 10%
+    padding-top: 13%
+    padding-bottom: 100px
+    button 
+      position: absolute
+      width: 200px
+      top: 28%
+      right: -2%
+      color: $color-button
+      &:hover
+        color: $color_white
+
+    .choice__list
+      font-size: 0
+      text-align: center
+      li 
+        display: inline-block
+        margin: 0 auto
+        height: 100%
+        margin: 0 1%
+        text-align: left
+        figure
+          display: inline-block
+          width: 395px
+          transition: 0.5s
+          &:after
+            display: inline-block
+            content: ''
+            width: 60px
+            height: 2px
+            margin: 0 0 0 335px
+            transition: 0.5s
+            background-color: $color_brown
+          div
+            margin: 40px 50px
+          h4 
+            padding-bottom: 20px
+          h5 
+            padding-bottom: 20px
+          img 
+            width: 395px
+        &:hover
+          figure
+            display: inline-block
+            background: $color_blue
+            box-shadow: 0 0 35px 0 rgba(1,0,0,.6)
+            &:after 
+              opacity: 0
+          h4,p
+            color: $color_white  
+        
+  .popular
+    position: relative
+    background: $color_gray
+    margin-right: 10%
+    padding-top: 3%
+    padding-bottom: 135px
+    padding-left: 11%
+    .title 
+      text-align: left
+    ul
+      &:before
+        display: inline-block
+        content: ''
+        position: absolute
+        width: 100%
+        height: 1px
+        top: 32.95%
+        background-color: $color_gray_w
+      li
+        position: relative
+        display: inline-block
+        color: $color_gray_b
+        padding-right: 80px
+        &:hover 
+          color: $color_blue
+          &:before
+            display: inline-block
+            content: ''
+            position: absolute
+            width: 65%
+            height: 2px 
+            top: 200%
+            background-color: $color_brown
+        
+    figure
+      width: 100%
+      img 
+        position: absolute
+        top: 0
+        right: -11.5%
+        width: 70%
+      div
+        display: inline-block 
+        width: 30%
+        margin-top: 50px
+        margin-bottom: 100px
+        p 
+          padding-bottom: 40px
+
+        button
+
+
+      
+
+    // margin-right: -11%
+    // position: relative
+    // &__content
+    // .title
+    //   text-align: left
+    //   padding-left: 14%
+    // ul 
+    //   padding-left: 14%
+    //   &:before
+    //     display: inline-block
+    //     content: ''
+    //     position: absolute
+    //     width: 100%
+    //     height: 1px
+    //     top: 40px 
+    //     background-color: $color_gray_w
+    // li 
+    //   display: inline
+    //   padding: 25px 80px 0 0
+    //   font-family: $font-family-serif
+    //   color: $color_gray_b
+    //   &:hover
+    //     color: $color_blue
+    //     &:before
+    //       display: inline-block
+    //       position: absolute
+    //       top: 67px 
+    //       left: 0
+    //       content: ''
+    //       width: 100%
+    //       height: 2px
+    //       background-color: $color_brown   
+        
+    // figure
+    //   width: 100%
+
+    //   img 
+    //     position: absolute
+    //     top: 0
+    //     right: 0
+    //   div
+    //     display: inline-block
+    //     width: 32%
+    //     padding-top: 70px
+    //     padding-left: 14%
+    //     margin-right: -10%
+    //   button 
+    //     top: 30px 
+
+  .search
+    position: relative
+    background-image: url(../images/bg_01.png)
+    background-size: 100%
+    background-repeat: no-repeat
+    margin-top: -3.5%
+    padding-top: 12%
+    padding-bottom: 10%
+    z-index: 1
+    &__box
+      position: relative
+      width: 60%
+      height: 140px
+      background: $color_blue
+      margin: 0 auto
+      h3 
+        position: absolute
+        top: -35px
+        padding-left: 30px
+        color: $color_white
+        z-index: 2
+      p 
+        color: $color_white
+    &__form
+      position: relative
+      display: inline-block
+      margin-top: 50px
+      margin-left: 4%
+      vertical-align: top
+      img 
+        width: 20px
+      &.form
+        position: relative
+        margin-left: -25px
+        &:before 
+          position: absolute
+          content: ''
+          display: block
+          width: 12px
+          height: 12px
+          top: 40%
+          right: 20px
+          border-color: transparent transparent $color_white $color_white
+          border-style: solid
+          border-width: 1.5px
+          transform: translateY(-50%) rotate(-45deg)
+          z-index: 1
+        select
+          width: 110%
+          height: 53px
+          padding: 0 50px
+          border-radius: 0
+          border: 0
+          box-shadow: border-box
+          background: $color_blue_b
+          -webkit-appearance: none
+          color: $color_white
+          font-size: $font_base_size *1.5
+          font-family: $font-family-sans
+          outline: none
+      &.keyword
+        input 
+          width: 100%
+          height: 53px
+          padding: 0 20px
+          border: 0
+          font-size: $font_base_size *1.5
+          background: $color_blue_b
+          color: $color_white
+          
+      &.date
+        position: relative
+        background: $color_blue_b
+        width: 300px
+        padding: 15px 0
+        // padding-left: 10px
+        // padding-right: 75px
+        // margin-right: 2%
+        outline: none
+        &:before 
+          position: absolute
+          content: '-'
+          display: block
+          width: 25px
+          top: 14%
+          margin-left: 39%
+          border-color: transparent transparent $color_white transparent
+          border-style: solid
+          border-width: 1px
+          z-index: 1
+        &:after
+          content: ''
+          display: inline-block
+          position: absolute
+          background-image: url(../images/icon_04.svg)
+          background-size: 100% 
+          background-repeat: no-repeat
+          width: 20px 
+          height: 20px
+          top: 30%
+          right: 35px
+      
+        p 
+          display: inline-block
+          margin-top: -90px
+          padding-left: 40px
+          
+         
+      &.button
+        position: absolute
+        margin-top: 43px
+        padding: 0 85px 0 50px 
+        right: -3%
+        &:after
+          content: ''
+          position: absolute
+          display: inline-block
+          background-image: url(../images/icon_05.svg)
+          background-size: 100%
+          background-repeat: no-repeat
+          width: 20px 
+          height: 20px
+          top: 23px
+          right: 35px
+
+
+
+  .news 
+    display: inline-block
+    position: relative
+    background: $color_gray
+    margin-right: 10%
+    padding-top: 3%
+    padding: 80px 10% 100px
+    font-size: 0
+    &__one 
+      display: inline-block
+      margin-right: 25px
+      width: 55%
+      figure 
+        display: inline-block
+        width: 100%
+        div 
+          width: 80%
+          padding: 0 20px
+          h4 
+            padding: 20px 0
+          h5
+            padding: 10px 20px
+            margin-top: -20px
+            background: $color_brown
+            color: $color_white
+      img 
+        width: 100%
+    
+    &__other
+      display: inline-block
+      padding-bottom: 35px
+      vertical-align: top
+      width: 40%
+      figure 
+        position: relative
+        display: inline-block
+        padding-bottom: 55px
+        &:after 
+          display: inline-block
+          content: ''
+          position: absolute
+          left: 0px
+          bottom: 25px
+          width: 105%
+          height: 1px
+          background-color: $color_gray_w
+      div 
+        display: inline-block
+        width: 55%
+        padding-top: 5px
+        padding-left: 20px
+        vertical-align: top
+      img
+        width: 45% 
+    button 
+      position: absolute 
+      top: 100px
+      right: -2%
+
+          
+
+    // width: 1300px
+    // max-width: 100%
+    // padding-bottom: 100px
+    // margin: 0 auto
+    // box-sizing: border-box
+    // font-size: 0
+    // &__one 
+    //   display: inline-block
+    //   margin-right: 25px
+    //   width: 55%
+    //   figure 
+    //     display: inline-block
+    //     width: 100%
+    //     div 
+    //       width: 80%
+    //       padding: 0 20px
+    //     h4 
+    //       padding: 20px 0
+    //     h5
+    //       padding: 10px 20px
+    //       top: -30px
+    //       background: $color_brown
+    //       color: $color_white
+    //   img 
+    //     width: 100%
+    
+    // &__other
+    //   display: inline-block
+    //   padding-bottom: 35px
+    //   vertical-align: top
+    //   width: 43%
+    //   figure 
+    //     display: inline-block
+    //     padding-bottom: 55px
+    //     &:after 
+    //       display: inline-block
+    //       content: ''
+    //       position: absolute
+    //       left: 0px
+    //       bottom: 25px
+    //       width: 105%
+    //       height: 1px
+    //       background-color: $color_gray_w
+    //   div 
+    //     display: inline-block
+    //     width: 55%
+    //     padding-top: 5px
+    //     padding-left: 20px
+    //     vertical-align: top
+    //   img
+    //     width: 45%
+
+    // button
+    //   left: 1365px
+    //   top: -765px
+      
+ 
+
+footer
+  background: $color_blue
+  bottom: 0
+  h3, a, li, p
+    color: $color_white
+  h3,ul
+    display: inline-block
+  > ul
+    vertical-align: top
+  .footer
+    position: relative
+    padding: 0 10%
+    &__logo
+      margin: 60px 45% 
+    &__conent
+      display: block
+      vertical-align: top
+      
+      ul 
+        h3 
+          margin-top: 0
+        li
+          padding-bottom: 6px
+  div:nth-child(3)
+    margin-top: 60px
+  img 
+    padding-top: 10px
+    
+  .quality__left
+    float: right
+  .sitmap
+    display: inline-block
+    vertical-align: top
+    float: right
+    ul
+      
+      li 
+        display: inline-block
+        vertical-align: top
+        right: 0
+        margin-left: 90px
+        
+        a 
+          display: block
+          padding-bottom: 10px
+          font-size: $font_base_size * 1.4
+          color: $color_gray_b
+        
+      h6
+        marging-top: -3px
+        padding-bottom: 3px 
+        &:not(:first-child)
+          padding-bottom: 3px
+        &:nth-child(2)
+          padding-top: 0
+        a
+          color: $color_white
+        & + a
+          margin-top: 10px
+  .copyright
+    width: auto
+    height: auto
+    margin: 30px -220px 0 -220px
+    padding: 20px 30px
+    text-align: center
+    background: $color_blue_b
+    p 
+      font-size: $font_base_size * 1.4
+
+
+// rwd
+
+@media screen and  (max-width: 1620px)
+  .contaliner 
+    .search
+      &__form 
+        &.button
+          width: 22%
+          top: -5px
+          left: 80%
+@media screen and  (max-width: 1540px)
+  header 
+    .header 
+      width: 103%
+    .burger__origin 
+      right: 5%
+  .contaliner 
+    .search
+      .date 
+        p   
+          padding-left: 35px
+      &__form 
+        &.button
+          width: 23%
+          top: 0
+          left: 80%
+@media screen and  (max-width: 1495px)
+  header 
+    .header 
+      width: 104%
+  .contaliner 
+    margin-top: -11%
+    .popular 
+      padding-left: 6%
+      padding-top: 0 
+      padding-bottom: 0
+      ul 
+        &:before 
+          top: 33%
+        li 
+          &:hover 
+            color: $color_blue
+            &:before
+              top: 245%
+    .search
+      .date 
+        width: 280px
+        p 
+          padding-left: 30px
+      &__form 
+        &.button
+          width: 20%
+          padding: 0 66px 0 30px
+  
+@media screen and  (max-width: 1080px)
+  h1 
+    font-size: 35px
+    line-height: 50px
+  h2 
+    font-size: 30px
+  h3 
+    font-size: 20px
+  header 
+    position: fixed
+    background: $color_blue
+    width: 100%
+    .header 
+      background-image: url(../images/logo-h.svg)
+      background-size: 40%
+      background-repeat: no-repeat
+      width: 40%
+      height: 50px
+      margin-left: 5%
+      margin-top: 1%
+      .menu, img
+        display: none
+    .burger
+      &__origin 
+        width: 25px
+        right: 11%
+        &:before, &:after 
+          width: 25px
+    .header__form
+      padding: 20px 3% 0 0 
+  .contaliner 
+    margin-top: 0
+    .banner 
+      &__wrapper 
+        width: 100%
+      &__content
+        z-index: 2
+        width: 100%
+        padding-top: 0
+        margin-top: 45%
+        right: 0
+        // background: linear-gradient(rgba(19, 35, 53, 0.2))
+        h1
+          color: $color_white
+        h5 
+          padding-top: 30px
+        button , .arrow 
+          display: none
+    .choice 
+      padding-top: 5%
+      &__list
+        li:nth-child(1)
+          display: none
+        li:nth-child(2)
+          display: none
+      button 
+        display: none
+    .popular 
+      &__content 
+        padding-left: 8%
+        margin-top: -50px
+        ul
+          margin-top: -30px
+          &:before 
+            display: none
+          li 
+            padding-right: 40px
+      figure 
+        div 
+          padding-top: 75%
+          padding-left: 8%
+          width: 80%
+          h3 
+            margin: 15px 0 20px 0
+          button 
+            display: none
+        img 
+          width: 100%
+          top: 20%
+    .search 
+      background-size: 250%
+      margin-top: -18%
+      padding-top: 23%
+      padding-bottom: 17%
+      &__box 
+        position: relative
+        height: 270px
+        margin-top: -60px
+        .form 
+          display: block
+          &:before 
+            top: 65%
+            right: 80px
+          select 
+            width: 75%
+            margin-left: 14.5%
+            margin-top: 30px
+            padding: 0 35px
+        .keyword 
+          width: 80%
+          input 
+            padding: 0 32px
+        .date 
+          width: 80%
+          &:before 
+            margin-left: 38%
+        .button 
+          position: absolute
+          width: 100%
+          top: 75%
+          left: 0
+          margin-left: 0
+
+
+      &__form 
+        margin-top: 10px
+        margin-left: 40px
+    .news 
+      &__one ,&__other
+        width: 100%
+        margin-right: 0
+        padding-bottom: 20px
+        figure
+          img 
+            width: 100%
+          div 
+            width: 100%
+            h4 
+              padding: 0
+            h5 
+              margin-top: 0
+              padding: 8px 0
+              background: $color_gray
+              color: $color_brown
+      &__other 
+        li:nth-child(3)
+          display: none
+  footer 
+    .footer__logo 
+      display: none
+    .footer__conent
+      padding-top: 50px
+      .sitmap 
+        display: none
+    img 
+      width: 40%
+@media screen and  (max-width: 768px)
+  header 
+    .header
+      height: 57px
+  .contaliner 
+    margin-top: 0
+    .banner 
+      &__wrapper 
+        width: 100%
+      &__content
+        z-index: 2
+        width: 100%
+        padding-top: 0
+        margin-top: 55%
+        right: 0
+    .content 
+      margin-top: -20px
+      .choice  
+        &__list 
+          li 
+            figure
+              width: 500px
+              &:after
+                margin: 0 0 0 445px
+              img
+                width: 500px
+              div 
+                margin: 30px 25px
+@media screen and  (max-width: 720px)
+  .contaliner 
+    .content 
+      margin-top: -30px  
+    .search 
+      .date 
+        &:before
+          margin-left: 31.5%
+    .news 
+      button 
+        display: none
+@media screen and  (max-width: 440px)
+  header 
+    position: fixed
+    background: $color_blue
+    width: 100%
+    .header 
+      background-size: 70%
+    .burger
+      &__origin 
+        right: 15%
+  .contaliner 
+    margin-top: 0
+    .banner 
+      &__wrapper 
+        margin-top: 62px
+    .content 
+      .choice  
+        &__list 
+          li 
+            figure
+              width: 300px
+              &:after
+                margin: 0 0 0 245px
+              img 
+                width: 300px
+    .popular 
+      figure 
+        img 
+          top: 25%
+    .search 
+      background-size: 325%
+      padding-top: 29% 
+      padding-bottom: 20%
+      .form 
+        margin-left: -8px
+        select 
+          width: 78%
+      .keyword ,.date 
+        margin-left: 30px
+      .date 
+        &:before 
+          display: none
+  footer 
+    .copyright 
+      p 
+        font-size: 10px
+@media screen and  (max-width: 320px)
+  h1 
+    font-size: 30px
+    line-height: 40px
+  h2 
+    font-size: 25px
+  header 
+    .header 
+      background-size: 85%
+      height: 50px
+      margin-top: 2%
+    .burger
+      &__origin 
+        right: 18%
+  .contaliner 
+    margin-top: 0
+    .banner 
+      &__wrapper 
+        margin-top: 57px
+    .content
+      .choice 
+        .title 
+          padding-top: 20px
+        &__list 
+          margin-top: -20px
+          li 
+            margin: 0
+            figure 
+              &:after 
+                margin: 0 0 0 205px
+              div 
+                width: 225px
+              p 
+                padding-bottom: 0
+      .popular 
+        &__content 
+          ul 
+            margin-top: -35px
+            li 
+              padding-right: 20px
+              font-size: 15px
+        figure
+          div 
+            p 
+              padding-bottom: 0
+      .search 
+        background-size: 410%
+        padding-top: 37% 
+        padding-bottom: 23%
+        .form 
+          margin-left: -12px
+          &:before 
+            right: 40px
+          select 
+            padding: 0 25px
+        .keyword ,.date
+          margin-left: 17px
+          width: 82%
+          input 
+            padding: 0 25px
+        .date
+          &:after 
+            top: 35%
+            right: 18px
+
+                
+
+
+    
+
+
+      
+
+
+
+    
+
+     
+      
+        
+        
+
+      
+      
+    
+    
+    
+    
+    
+  
+
+      
+
+        
+    
+
+
+  
+ 
+  
+    // &:before
+    //   display: inline-block
+    //   content: ''
+    //   width: 30px
+    //   height: 2px
+    //   background-color: red
+    // &:after
+    //   display: inline-block
+    //   content: ''
+    //   width: 30px
+    //   height: 2px
+    //   background-color: green
+    
+// .choice_list
+//   li
+  
+
+  
+    
+
+
+
+
+  

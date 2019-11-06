@@ -14,6 +14,7 @@ $font-family-cormorant: 'Cormorant Infant'
 
 *
   box-sizing: border-box
+  
   // border: 1px solid #fff !important
 
 @mixin size($w,$h)
@@ -23,6 +24,7 @@ $font-family-cormorant: 'Cormorant Infant'
 html,body
   font-family: $font-family-sans
   overflow-x: hidden
+  word-wrap   : break-word
 
 h1 
   font-family: $font-family-serif
@@ -786,7 +788,7 @@ footer
           width: 20%
           padding: 0 66px 0 30px
   
-@media screen and  (max-width: 1080px)
+@media screen and  (max-width: 1024px)
   h1 
     font-size: 35px
     line-height: 50px
@@ -803,31 +805,34 @@ footer
       background-size: 40%
       background-repeat: no-repeat
       width: 40%
-      height: 50px
+      height: 75px
       margin-left: 5%
       margin-top: 1%
       .menu, img
         display: none
     .burger
       &__origin 
+        margin-top: 15px
         width: 25px
         right: 11%
         &:before, &:after 
           width: 25px
     .header__form
-      padding: 20px 3% 0 0 
+      padding: 33px 3% 0 0 
   .contaliner 
     margin-top: 0
     .banner 
       &__wrapper 
         width: 100%
+        margin-top: 8%
       &__content
         z-index: 2
         width: 100%
         padding-top: 0
-        margin-top: 45%
+        margin-top: 65%
         right: 0
-        // background: linear-gradient(rgba(19, 35, 53, 0.2))
+        background: linear-gradient( 0deg, rgb(20,20,20) 10%, rgba(255,255,255,0) 150%)
+        
         h1
           color: $color_white
         h5 
@@ -852,7 +857,7 @@ footer
           &:before 
             display: none
           li 
-            padding-right: 40px
+            padding-right: 26px
       figure 
         div 
           padding-top: 75%
@@ -930,6 +935,8 @@ footer
       padding-top: 50px
       .sitmap 
         display: none
+    .copyright 
+      margin: 30px 0 0 0
     img 
       width: 40%
 @media screen and  (max-width: 768px)
@@ -945,8 +952,9 @@ footer
         z-index: 2
         width: 100%
         padding-top: 0
-        margin-top: 55%
+        margin-top: 60%
         right: 0
+        background: linear-gradient( 0deg, rgb(20,20,20) 0%, rgba(255,255,255,0) 100%)
     .content 
       margin-top: -20px
       .choice  
@@ -961,6 +969,12 @@ footer
               div 
                 margin: 30px 25px
 @media screen and  (max-width: 720px)
+  header 
+    .burger
+      &__origin 
+        margin-top: 5px
+    .header__form
+      padding-top: 28px
   .contaliner 
     .content 
       margin-top: -30px  
@@ -986,6 +1000,8 @@ footer
     .banner 
       &__wrapper 
         margin-top: 62px
+      &__content 
+        margin-top: 52%
     .content 
       .choice  
         &__list 
@@ -1017,7 +1033,7 @@ footer
     .copyright 
       p 
         font-size: 10px
-@media screen and  (max-width: 320px)
+@media screen and  (max-width: 375px)
   h1 
     font-size: 30px
     line-height: 40px
@@ -1025,17 +1041,38 @@ footer
     font-size: 25px
   header 
     .header 
+      margin-top: 4%
+  .contaliner 
+    .banner 
+      &__wrapper 
+        margin-top: 73px
+      &__content 
+        margin-top: 58%
+    .search  
+      background-size: 345%
+      .form  
+        &:before 
+          right: 53px
+
+
+@media screen and  (max-width: 320px)
+  
+  header 
+    .header 
       background-size: 85%
       height: 50px
-      margin-top: 2%
     .burger
       &__origin 
         right: 18%
+        margin-top: 0
+    .header__form 
+      margin-top: -5px
   .contaliner 
     margin-top: 0
     .banner 
       &__wrapper 
         margin-top: 57px
+      
     .content
       .choice 
         .title 
@@ -1066,6 +1103,10 @@ footer
         background-size: 410%
         padding-top: 37% 
         padding-bottom: 23%
+        &__box 
+          h3
+            padding-left: 15px
+            top: -40px
         .form 
           margin-left: -12px
           &:before 

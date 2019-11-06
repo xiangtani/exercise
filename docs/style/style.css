@@ -6,6 +6,7 @@
 html, body {
   font-family: "Noto Sans TC";
   overflow-x: hidden;
+  word-wrap: break-word;
 }
 
 h1 {
@@ -844,7 +845,7 @@ footer .copyright p {
   }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1024px) {
   h1 {
     font-size: 35px;
     line-height: 50px;
@@ -865,7 +866,7 @@ footer .copyright p {
     background-size: 40%;
     background-repeat: no-repeat;
     width: 40%;
-    height: 50px;
+    height: 75px;
     margin-left: 5%;
     margin-top: 1%;
   }
@@ -873,6 +874,7 @@ footer .copyright p {
     display: none;
   }
   header .burger__origin {
+    margin-top: 15px;
     width: 25px;
     right: 11%;
   }
@@ -880,20 +882,23 @@ footer .copyright p {
     width: 25px;
   }
   header .header__form {
-    padding: 20px 3% 0 0;
+    padding: 33px 3% 0 0;
   }
   .contaliner {
     margin-top: 0;
   }
   .contaliner .banner__wrapper {
     width: 100%;
+    margin-top: 8%;
   }
   .contaliner .banner__content {
     z-index: 2;
     width: 100%;
     padding-top: 0;
-    margin-top: 45%;
+    margin-top: 65%;
     right: 0;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #141414), color-stop(150%, rgba(255, 255, 255, 0)));
+    background: linear-gradient(0deg, #141414 10%, rgba(255, 255, 255, 0) 150%);
   }
   .contaliner .banner__content h1 {
     color: #fff;
@@ -927,7 +932,7 @@ footer .copyright p {
     display: none;
   }
   .contaliner .popular__content ul li {
-    padding-right: 40px;
+    padding-right: 26px;
   }
   .contaliner .popular figure div {
     padding-top: 75%;
@@ -1023,6 +1028,9 @@ footer .copyright p {
   footer .footer__conent .sitmap {
     display: none;
   }
+  footer .copyright {
+    margin: 30px 0 0 0;
+  }
   footer img {
     width: 40%;
   }
@@ -1042,8 +1050,10 @@ footer .copyright p {
     z-index: 2;
     width: 100%;
     padding-top: 0;
-    margin-top: 55%;
+    margin-top: 60%;
     right: 0;
+    background: -webkit-gradient(linear, left bottom, left top, from(#141414), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(0deg, #141414 0%, rgba(255, 255, 255, 0) 100%);
   }
   .contaliner .content {
     margin-top: -20px;
@@ -1063,6 +1073,12 @@ footer .copyright p {
 }
 
 @media screen and (max-width: 720px) {
+  header .burger__origin {
+    margin-top: 5px;
+  }
+  header .header__form {
+    padding-top: 28px;
+  }
   .contaliner .content {
     margin-top: -30px;
   }
@@ -1091,6 +1107,9 @@ footer .copyright p {
   }
   .contaliner .banner__wrapper {
     margin-top: 62px;
+  }
+  .contaliner .banner__content {
+    margin-top: 52%;
   }
   .contaliner .content .choice__list li figure {
     width: 300px;
@@ -1126,7 +1145,7 @@ footer .copyright p {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
   h1 {
     font-size: 30px;
     line-height: 40px;
@@ -1135,12 +1154,33 @@ footer .copyright p {
     font-size: 25px;
   }
   header .header {
+    margin-top: 4%;
+  }
+  .contaliner .banner__wrapper {
+    margin-top: 73px;
+  }
+  .contaliner .banner__content {
+    margin-top: 58%;
+  }
+  .contaliner .search {
+    background-size: 345%;
+  }
+  .contaliner .search .form:before {
+    right: 53px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  header .header {
     background-size: 85%;
     height: 50px;
-    margin-top: 2%;
   }
   header .burger__origin {
     right: 18%;
+    margin-top: 0;
+  }
+  header .header__form {
+    margin-top: -5px;
   }
   .contaliner {
     margin-top: 0;
@@ -1180,6 +1220,10 @@ footer .copyright p {
     background-size: 410%;
     padding-top: 37%;
     padding-bottom: 23%;
+  }
+  .contaliner .content .search__box h3 {
+    padding-left: 15px;
+    top: -40px;
   }
   .contaliner .content .search .form {
     margin-left: -12px;
